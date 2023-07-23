@@ -1,0 +1,111 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "dev.audit",
+  "version": "1.0.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "Audit"
+  },
+  "description": {
+    "en": "Adds more generic as well as additional flows"
+  },
+  "category": [
+    "tools"
+  ],
+  "permissions": [
+    "homey:manager:api"
+  ],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Jamie Peake",
+    "email": "jamie.peake@gmail.com"
+  },
+  "flow": {
+    "triggers": [
+      {
+        "title": {
+          "en": "Any logic variable has changed"
+        },
+        "hint": {
+          "en": "Any logic variable has changed"
+        },
+        "tokens": [
+          {
+            "type": "string",
+            "name": "name",
+            "title": {
+              "en": "Name"
+            },
+            "description": {
+              "en": "The name of the variable which has changed"
+            },
+            "example": {
+              "en": "timer-override"
+            }
+          },
+          {
+            "type": "string",
+            "name": "type",
+            "title": {
+              "en": "Type"
+            },
+            "description": {
+              "en": "The type of the variable which has changed"
+            },
+            "example": {
+              "en": "boolean"
+            }
+          },
+          {
+            "type": "string",
+            "name": "value",
+            "title": {
+              "en": "Value"
+            },
+            "description": {
+              "en": "The value of the variable which has changed"
+            },
+            "example": {
+              "en": "true"
+            }
+          },
+          {
+            "type": "string",
+            "name": "action",
+            "title": {
+              "en": "Action"
+            },
+            "description": {
+              "en": "What action was done to the variable"
+            },
+            "example": {
+              "en": "update"
+            }
+          },
+          {
+            "type": "string",
+            "name": "description",
+            "title": {
+              "en": "Description"
+            },
+            "description": {
+              "en": "A sentenance of what has changed"
+            },
+            "example": {
+              "en": "timer-override: Updated (true)"
+            }
+          }
+        ],
+        "id": "variable"
+      }
+    ]
+  }
+}
